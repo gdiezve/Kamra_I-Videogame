@@ -62,6 +62,7 @@ public class Snake : MonoBehaviour
         if (player.gameObject.GetComponent <Player>().isOnEnemy == true) {
             isDying = true;
             animator.SetBool("isDying", isDying);
+            Destroy(this.gameObject, 2);
         }
     }
 }
