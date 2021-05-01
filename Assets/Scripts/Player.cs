@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,8 @@ public class Player : MonoBehaviour
     public LayerMask floor;
     public LayerMask enemy;
     public bool isOnFloor;
-    public bool isOnEnemy; 
+    public bool isOnEnemy;
+    public Animator animator;
 
     public HealthBar healthBar;
     
@@ -26,17 +28,27 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            TakeDamage(20);
+        isOnFloor = Physics2D.OverlapCircle(foot.position, footRadius, floor);
+
+        if (!isOnFloor) {
+            isOnEnemy = Physics2D.OverlapCircle(foot.position, footRadius, enemy);
         }
 
-        isOnFloor = Physics2D.OverlapCircle(foot.position, footRadius, floor);
-        isOnEnemy = Physics2D.OverlapCircle(foot.position, footRadius, enemy);
+        if (currentHealth == 0) {
+            Application.Quit();
+        }
     }
 
     void TakeDamage(int damage) {
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+    }
+
+    void OnCollisionEnter2D (Collision2D collision) {
+        if (collision.gameObject.tag == "Enemy" && isOnEnemy == false)
+        {
+            TakeDamage(10);
+        }
     }
 }
