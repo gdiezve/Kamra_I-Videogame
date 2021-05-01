@@ -33,10 +33,6 @@ public class Player : MonoBehaviour
         if (!isOnFloor) {
             isOnEnemy = Physics2D.OverlapCircle(foot.position, footRadius, enemy);
         }
-
-        if (currentHealth == 0) {
-            Application.Quit();
-        }
     }
 
     void TakeDamage(int damage) {
