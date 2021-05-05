@@ -13,6 +13,13 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
+    Rigidbody2D rb;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent <Rigidbody2D>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -46,5 +53,10 @@ public class PlayerMovement : MonoBehaviour
         // Move the character
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+
+        if (rb.position.y < -15f)
+        {
+            FindObjectOfType<GameOverMenu>().GameOver();
+        }
     }
 }

@@ -14,9 +14,11 @@ public class Player : MonoBehaviour
     public LayerMask enemy;
     public bool isOnFloor;
     public bool isOnEnemy;
-    public Animator animator;
+    public bool isDead = false;
 
+    public Animator animator;
     public HealthBar healthBar;
+
     
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,11 @@ public class Player : MonoBehaviour
 
         if (!isOnFloor) {
             isOnEnemy = Physics2D.OverlapCircle(foot.position, footRadius, enemy);
+        }
+
+        if (currentHealth == 0)
+        {
+            isDead = true;
         }
     }
 
