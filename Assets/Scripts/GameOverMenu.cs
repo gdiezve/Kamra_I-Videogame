@@ -27,6 +27,7 @@ public class GameOverMenu : MonoBehaviour
         playerObject.SetActive(false);
         grid.SetActive(false);
         scenery.SetActive(false);
+        enemy.SetActive(false);
         Time.timeScale = 0f;
     }
 

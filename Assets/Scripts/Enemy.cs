@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Snake : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     
     public float initialPosition;
@@ -12,6 +12,7 @@ public class Snake : MonoBehaviour
     public GameObject player;
     public GameObject foot;
     public bool isDying = false;
+    public int killingPoints = 10;
 
     Rigidbody2D rb;
     Animator animator;
@@ -61,6 +62,8 @@ public class Snake : MonoBehaviour
 
         if (player.gameObject.GetComponent <Player>().isOnEnemy == true) {
             isDying = true;
+            player.gameObject.GetComponent <Player>().isOnEnemy = false;
+            ScoreManager.instance.ChangeScore(killingPoints);
             animator.SetBool("isDying", isDying);
             Destroy(this.gameObject, 2);
         }

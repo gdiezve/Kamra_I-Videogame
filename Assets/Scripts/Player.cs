@@ -48,10 +48,28 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
+    void IncreaseHealth(int health) 
+    {
+        currentHealth += health;
+
+        healthBar.SetHealth(currentHealth);
+    }
+
     void OnCollisionEnter2D (Collision2D collision) {
         if (collision.gameObject.tag == "Enemy" && isOnEnemy == false)
         {
             TakeDamage(10);
+        }
+    }
+
+    private void OnTriggerEnter2D (Collider2D other) {
+        if (other.gameObject.CompareTag("Coin")) {
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("WaterDrop")) {
+            IncreaseHealth(20);
+            Destroy(other.gameObject);
         }
     }
 }

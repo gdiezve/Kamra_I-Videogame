@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7373614832bff4d208b877f27963879c
+guid: dff050bee8cdf43368444ce9ce93972e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -59847128137555449
-    second: Hyena_0
+      213: -4806757006319390649
+    second: hyena_idle_3_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -102,12 +102,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hyena_0
+      name: hyena_idle_3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
+        width: 46
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -116,8 +116,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 702a882aa516b2ff0800000000000000
-      internalID: -59847128137555449
+      spriteID: 74076b458f7fa4db0800000000000000
+      internalID: -4806757006319390649
       vertices: []
       indices: 
       edges: []

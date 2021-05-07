@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7373614832bff4d208b877f27963879c
+guid: a902b528544f74933be1f5abf1315730
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -59847128137555449
-    second: Hyena_0
+      213: 2344752271648702523
+    second: hyena_walk_5_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -102,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hyena_0
+      name: hyena_walk_5_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1
         width: 48
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,8 +116,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 702a882aa516b2ff0800000000000000
-      internalID: -59847128137555449
+      spriteID: b3049ed94cb3a8020800000000000000
+      internalID: 2344752271648702523
       vertices: []
       indices: 
       edges: []
