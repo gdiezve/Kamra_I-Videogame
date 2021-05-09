@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Coin
+  - WaterDrop
+  - Endpoint
   layers:
   - Default
   - TransparentFX
@@ -40,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 1614309605
+    locked: 0
+  - name: UI
+    uniqueID: 3529333733
     locked: 0
   - name: Default
     uniqueID: 0
