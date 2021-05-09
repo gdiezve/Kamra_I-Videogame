@@ -18,6 +18,13 @@ public class Player : MonoBehaviour
 
     public Animator animator;
     public HealthBar healthBar;
+    public GameObject LevelCompleteMenuUI;
+    public GameObject playerObject;
+    public GameObject grid;
+    public GameObject scenery;
+    public GameObject enemies;
+    public GameObject coins;
+    public GameObject waterdrops;    
 
     
     // Start is called before the first frame update
@@ -70,6 +77,19 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("WaterDrop")) {
             IncreaseHealth(20);
             Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("Endpoint")) {
+            LevelCompleteMenuUI.SetActive(true);
+            playerObject.SetActive(false);
+            grid.SetActive(false);
+            scenery.SetActive(false);
+            coins.SetActive(false);
+            waterdrops.SetActive(false);
+            if (enemies != null) {
+                enemies.SetActive(false);
+            }
+            Time.timeScale = 0f;
         }
     }
 }
