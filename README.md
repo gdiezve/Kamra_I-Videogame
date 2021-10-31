@@ -2,4 +2,5 @@
 
 You can play the game by downloading the apk called "Game" and executing it.
 
-![image](https://user-images.githubusercontent.com/49267946/115347262-79391700-a1b1-11eb-9446-18fc8f0cf3f7.png)
+
+<img width="1236" alt="Captura de pantalla 2021-10-31 a las 19 26 54" src="https://user-images.githubusercontent.com/49267946/139596871-ff05f27f-82fa-4d23-8c75-84ee0656330a.png">
