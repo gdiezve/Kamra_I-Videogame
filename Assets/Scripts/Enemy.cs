@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public GameObject foot;
     public bool isDying = false;
     public int killingPoints = 10;
+    [SerializeField] private Collider2D disableCollider;
 
     Rigidbody2D rb;
     Animator animator;
@@ -48,6 +49,7 @@ public class Enemy : MonoBehaviour
 
         if (isDying) {
             rb.velocity = Vector3.zero;
+            disableCollider.enabled = false;
         }
     }
 

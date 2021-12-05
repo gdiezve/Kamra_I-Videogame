@@ -11,6 +11,9 @@ public class GameOverMenu : MonoBehaviour
     public GameObject grid;
     public GameObject scenery;
     public GameObject enemy;
+    public GameObject waterdrops;
+    public GameObject coins;
+    public GameObject platforms;
 
     // Update is called once per frame
     void Update()
@@ -27,16 +30,18 @@ public class GameOverMenu : MonoBehaviour
         playerObject.SetActive(false);
         grid.SetActive(false);
         scenery.SetActive(false);
-        if (enemy != null) {
-            enemy.SetActive(false);
-        }
-        Time.timeScale = 0f;
+        enemy.SetActive(false);
+        waterdrops.SetActive(false);
+        coins.SetActive(false);
+        platforms.SetActive(false);
+        //Time.timeScale = 0f;
     }
 
     public void RestartButton ()
     {
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("game restarted");
     }
 
     public void QuitButton ()
